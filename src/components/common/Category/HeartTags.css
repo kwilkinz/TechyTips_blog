@@ -1,0 +1,37 @@
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.original-heart {
+    color: black;
+    opacity: 0.3;
+    cursor: pointer;
+    width: 25px;
+    height: 30px;
+}
+
+.original-heart:hover {
+    animation: heartbeat 1s infinite;
+    fill: red;
+    color: red;
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.red-heart {
+    fill: red;
+    color: #fb076d40;
+    cursor: pointer;
+    width: 25px;
+    height: 30px;
+}
+
+

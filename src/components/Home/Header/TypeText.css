@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+.text{
+    font-family: 'Special Elite', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+    color: #0f52ba;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }

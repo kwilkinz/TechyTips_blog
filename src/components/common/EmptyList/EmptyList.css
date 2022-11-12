@@ -1,0 +1,11 @@
+.emptyList-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.emptyList-wrap img {
+  max-width: 350px;
+  width: 100%;
+  background-color: rgba(160, 160, 160, 0.075);
+  mix-blend-mode:color-burn;
+}
