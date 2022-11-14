@@ -12,9 +12,11 @@ This modern Techy Tips theme is perfect for creating any kind of blog website fr
 
 ---
 
-## Installation (start):
+## Installation
 
-### `npm start`
+### Installation (start):
+
+#### `npm start`
 
 - Runs the app in the development mode.\
   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -22,16 +24,16 @@ This modern Techy Tips theme is perfect for creating any kind of blog website fr
 - The page will reload when you make changes.\
   You may also see any lint errors in the console.
 
-## Installation (test):
+### Installation (test):
 
-### `npm test`
+#### `npm test`
 
 - Launches the test runner in the interactive watch mode.\
   See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Installation (build):
+### Installation (build):
 
-### `npm run build`
+#### `npm run build`
 
 - Builds the app for production to the `build` folder.\
   It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -49,19 +51,19 @@ Screenshots and examples for how this application works.
 
 ### Home Page of Blog --
 
-![home](assets/images/homescreenshot.png)
+![home](public/assets/images/homescreenshot.png)
 
 ---
 
 ### Blog Pages by Id Clicked --
 
-![individual blog by Id](assets/images/blogidscreenshot.png)
+![individual blog by Id](public/assets/images/blogidscreenshot.png)
 
 ---
 
 ### Blog not Found by Category --
 
-![Not found](assets/images/notfoundscreenshot.png)
+![Not found](public/assets/images/notfoundscreenshot.png)
 
 ---
 
