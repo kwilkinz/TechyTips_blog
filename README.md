@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# A Clean Looking Blog Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This modern Techy Tips theme is perfect for creating any kind of blog website from design, beauty, lifestyle, photography, travel, and lastly developer tips.
 
-## Available Scripts
+## Table of Contents:
 
-In the project directory, you can run:
+- [Installation](#installation-start)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Features_Added-inProgress](#features)
+- [tests](#tests)
+
+---
+
+## Installation (start):
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Runs the app in the development mode.\
+  Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The page will reload when you make changes.\
+  You may also see any lint errors in the console.
+
+## Installation (test):
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Launches the test runner in the interactive watch mode.\
+  See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## Installation (build):
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Builds the app for production to the `build` folder.\
+  It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The build is minified and the filenames include the hashes.\
+  Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Screenshots and examples for how this application works.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Home Page of Blog --
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![home](assets/images/homescreenshot.png)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Blog Pages by Id Clicked --
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![individual blog by Id](assets/images/blogidscreenshot.png)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Blog not Found by Category --
 
-### Analyzing the Bundle Size
+![Not found](assets/images/notfoundscreenshot.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Credits:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [codeFreeze Youtube](https://www.youtube.com/watch?v=7kjud2ikReQ)
+- [Heartbeat Animation](https://www.youtube.com/watch?v=JXJPbWQmptE)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Features
 
-### Deployment
+### Added:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. [ √ ] Typewriter Effect for Title using: `npm i typewriter-effect` : [Repository](github.com/tameemsafi/typewriterjs).
+2. [ √ ] User Hearts Effect: used CSS and useStates so the user can toggle between liking a post and unliking a post.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Progress for Front-End:
+
+1. [ ] Cookies to a persons local machine to be able to store their data.
+2. [ ] Create a login page for different users.
+3. [ ] Different id's will be connected to different specific EJS files. In that case all Blog posts can have different appearances.
+4. [ ] Will design my own characters for individual author posts.
+
+---
+
+### Progress for Back-End:
+
+1. [ ] Build a RESTful API using Express and Knex
+2. [ ] Use a PostgreSQL Database - Render.
+
+---
+
+## Tests:
+
+Not currently implemented.
