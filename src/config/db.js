@@ -19,12 +19,7 @@ const blogPosts = [
       category: 'technology',
       subCategory: ['vscode', 'themes', 'color'],
       description: 
-                 
-          <h3> Visuals are essential for productivity when writing, editing and debugging 
-            code. VSCode features are elegant, lighting fast editorial use, ideal for everday. With the support of hundreds of other programmers creating radical new color themes, which by the way has more than 5,000 themes to choose from. So lets jump in and check out the stylish themes!</h3>
-
-        
-        ,
+        "<h1></h1> Visuals are essential for productivity when writing, editing and debugging code. VSCode features are elegant, lighting fast editorial use, ideal for everday. With the support of hundreds of other programmers creating radical new color themes, which by the way has more than 5,000 themes to choose from. So lets jump in and check out the stylish themes!",
       authorName: 'Inari Williams',
       authorAvatar: '/assets/images/author.png',
       createdAt: 'November 17, 2022',
