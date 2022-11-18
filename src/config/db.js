@@ -15,14 +15,19 @@ const blogPosts = [
     },
     {
       id: 2,
-      title: 'Milan Places That Highlight The City',
-      category: 'travel',
-      subCategory: ['vacation', 'holidays', 'sight seeing'],
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      authorName: 'John Doe',
+      title: 'Getting into Winter, best VScode Color Themes',
+      category: 'technology',
+      subCategory: ['vscode', 'themes', 'color'],
+      description: 
+                 
+          <h3> Visuals are essential for productivity when writing, editing and debugging 
+            code. VSCode features are elegant, lighting fast editorial use, ideal for everday. With the support of hundreds of other programmers creating radical new color themes, which by the way has more than 5,000 themes to choose from. So lets jump in and check out the stylish themes!</h3>
+
+        
+        ,
+      authorName: 'Inari Williams',
       authorAvatar: '/assets/images/author.png',
-      createdAt: 'June 03, 2021',
+      createdAt: 'November 17, 2022',
       cover: '/assets/images/snorkle.png',
     },
     {
