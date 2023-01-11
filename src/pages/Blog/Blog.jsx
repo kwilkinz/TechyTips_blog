@@ -12,11 +12,11 @@ const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
-  // useEffect
+  // useEffect d
   useEffect(() => {
     let blog = blogPosts.find((blog) => blog.id === parseInt(id));
     if (blog) {
-      setBlog(blog);
+      setBlog(blog)
     }
   }, [id]);
 
