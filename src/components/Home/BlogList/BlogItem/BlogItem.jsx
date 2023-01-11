@@ -4,9 +4,7 @@ import "./BlogItem.css";
 import CategoryTags from "../../../common/Category/CategoryTags";
 import HeartTags from "../../../common/Category/HeartTags";
 
-// parent > BlogList passes the db data to here from home
-// Child  > BlogItem (individual blog information)
-// Child (this) is using the information from the DB data
+
 const BlogItem = ({
   blog: {
     title,
@@ -36,9 +34,7 @@ const BlogItem = ({
             <p>{createdAt}</p>
           </div>
         </div>
-
-        {/* link to so you can use EJS Here or whatever  */}
-        <Link className="blogItem-link" to={`/blog/${id}`}>
+        <Link className="blogItem-link" >
           ➝
         </Link>
       </footer>

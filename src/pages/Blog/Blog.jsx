@@ -12,7 +12,7 @@ const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
-  // useEffect d
+  // useEffect 
   useEffect(() => {
     let blog = blogPosts.find((blog) => blog.id === parseInt(id));
     if (blog) {
