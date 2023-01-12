@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import EmptyList from "../../components/common/EmptyList/EmptyList";
 import BlogList from "../../components/Home/BlogList/BlogList";
 import Header from "../../components/Home/Header/Header"
 import Search from "../../components/Home/SearchBar/Search";
 import blogPosts from "../../config/db";
+import axios from "axios"
 
 const Home = () => {
+
 // useState 
-    const [blogs, setBlogs] = useState(blogPosts);
+    const [blogs, setBlogs] = useState([]);
     const [searchKey, setSearchKey] = useState('');
 
 // useEffects for API later 
+useEffect(() => {
+    const fetchPosts = async () => {
+        const res = await axios.get("/posts")
+        setBlogs(res.data)
+    }
+    fetchPosts()
+}, [])
 
 // Search Submit > when search clicked run the handleSearchResult func()
     const handleSearchSubmit = (event) => {

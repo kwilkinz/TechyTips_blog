@@ -5,41 +5,33 @@ import CategoryTags from "../../../common/Category/CategoryTags";
 import HeartTags from "../../../common/Category/HeartTags";
 
 
-const BlogItem = ({
-  blog: {
-    title,
-    category,
-    subCategory,
-    description,
-    authorName,
-    authorAvatar,
-    createdAt,
-    cover,
-    id,
-  },
-}) => {
+const BlogItem = ({ blog }) => {
+  const PF = "http://localhost:5000/images"
+
   return (
     <div className='blogItem-wrap'>
-      <img className='blogItem-cover' src={cover} alt='cover' />
-      <CategoryTags label={category} />
-      <h3>{title}</h3>
-      <p className='blogItem-desc'>{description}</p>
+      {blog.photo && <img className="postImg" src={PF + blog.photo} alt="cover photo" />}
+  
+      <CategoryTags label={blog.category} />
+      <Link to={`/post/${blog._id}`} style={{textDecoration: "none", color: "inherit"}}>
+      <h3>{blog.title}</h3>
+      </Link>
+      <p className='blogItem-desc'>{blog.desc}</p>
 
-      {/* footer ( author, date, arrow )*/}
       <footer>
         <div className="blogItem-author">
-          <img src={authorAvatar} alt="avatar" />
+          <img src={blog.profilePic} alt="avatar" />
           <div>
-            <h6>{authorName}</h6>
-            <p>{createdAt}</p>
+            <h6>{blog.username}</h6>
+            <p> {new Date(blog.createdAt).toDateString()}</p>
           </div>
         </div>
-        <Link className="blogItem-link" >
+        <div className="blogItem-link" >
           ➝
-        </Link>
+        </div>
       </footer>
     </div>
   );
-};
+}
 
 export default BlogItem;
