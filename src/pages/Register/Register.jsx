@@ -1,7 +1,7 @@
+import axios from "axios";
 import "./Register.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -70,7 +70,11 @@ const Register = () => {
           Home
         </Link>
       </div>
-      {error && <span style={{color:"red", marginTop:"10px"}}>Something went wrong!</span>}
+      {error && (
+        <span style={{ color: "red", marginTop: "10px" }}>
+          Something went wrong!
+        </span>
+      )}
     </div>
   );
 };

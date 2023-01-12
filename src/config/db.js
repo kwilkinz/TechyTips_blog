@@ -1,5 +1,3 @@
-// Fake Environment until Database
-// passing blogList(blogPosts) - to Home BlogList as params
 const blogPosts = [
   {
     id: 1,

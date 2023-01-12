@@ -45,10 +45,16 @@ const Login = () => {
           Login
         </button>
       </form>
-        <div className="loginRegisterButton">
-          <Link className="link" to="/register" style={{ textDecoration: "none", color: "white" }}>Register</Link>
-        </div>
-        <div className="homeLoginButton">
+      <div className="loginRegisterButton">
+        <Link
+          className="link"
+          to="/register"
+          style={{ textDecoration: "none", color: "white" }}
+        >
+          Register
+        </Link>
+      </div>
+      <div className="homeLoginButton">
         <Link
           className="button"
           to="/"
@@ -59,6 +65,6 @@ const Login = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;

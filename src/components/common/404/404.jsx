@@ -1,8 +1,8 @@
 import React from "react";
-import "./EmptyList.css";
+import "../EmptyList/EmptyList.css"
 import imageGif from "../../../images/13525-empty.gif"
 
-const EmptyList = () => {
+const NotFound = () => {
     return (
         <div className="emptyList-wrap">
             <div style={{marginTop: "20px"}}>
@@ -14,4 +14,4 @@ const EmptyList = () => {
     );
 }
 
-export default EmptyList;
+export default NotFound;

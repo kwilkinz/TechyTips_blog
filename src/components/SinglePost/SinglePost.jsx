@@ -1,7 +1,7 @@
 import React from "react";
+import axios from "axios";
 import "./Singlepost.css";
 import Topbar from "../TopBar/Topbar";
-import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
@@ -43,13 +43,15 @@ const SinglePost = () => {
         title,
         desc,
       });
-      setUpdateMode(false)
+      setUpdateMode(false);
     } catch (err) {}
   };
 
   return (
-    <div className="singlePost" style={{margin: "5%"}}>
-      <div><Topbar /></div>
+    <div className="singlePost" style={{ margin: "5%" }}>
+      <div>
+        <Topbar />
+      </div>
       <div className="singlePostWrapper">
         {post.photo && (
           <img src={PF + post.photo} alt="" className="singlePostImg" />
@@ -82,7 +84,7 @@ const SinglePost = () => {
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
             Author:
-            <Link to={`/?user=${post.username}`} className="link">
+            <Link to={`/?user=${post.username}`} className="authorUsername">
               <b> {post.username}</b>
             </Link>
           </span>

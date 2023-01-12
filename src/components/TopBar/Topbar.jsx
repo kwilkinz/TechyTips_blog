@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { Context } from "../../context/Context";
-import { useContext } from "react";
 import "./Topbar.css";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "../../context/Context";
 
 const Topbar = () => {
   const { user, dispatch } = useContext(Context);
@@ -10,6 +10,8 @@ const Topbar = () => {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
+
+
   return (
     <div className="top">
       <div className="topLeft"></div>
@@ -33,21 +35,15 @@ const Topbar = () => {
               WRITE
             </Link>
           </li>
-          {user && (
-            <li className="topListItem" style={{ textDecoration: "none" }}>
-              LOGOUT
-            </li>
-          )}
+          <li className="topListItem" onClick={handleLogout}>
+            {user && "LOGOUT"}
+          </li>
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <Link className="link" to="/settings">
-            <img
-              className="topImg"
-              src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
+          <Link to="/settings">
+            <img className="topImg" src={PF+user.profilePic} alt="" />
           </Link>
         ) : (
           <ul className="topList">
@@ -71,7 +67,6 @@ const Topbar = () => {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
   );

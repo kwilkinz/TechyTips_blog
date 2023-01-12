@@ -8,7 +8,8 @@ import Settings from './pages/UserSettings/Settings';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import { useContext } from "react";
-import { Context } from "./context/Context";
+import { Context } from "./context/Context"
+import NotFound from './components/common/404/404';
 
 const App = () => {
   const { user } = useContext(Context);
@@ -20,7 +21,8 @@ const App = () => {
         <Route path='/login' element={user ? <Home/> : <Login /> } />
         <Route path='/write' element={user ? <Write/> : <Register /> } />
         <Route path='/settings' element={user ? <Settings/> : <Register /> } />
-        <Route path='/post/:blogId' element={<Single /> } />
+        <Route path='/post/:postId' element={<Single /> } />
+        <Route path='*' element={<NotFound /> } />
       </Routes>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from "react";
+import axios from "axios";
 import "./Settings.css";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
-import axios from "axios";
 
 const Settings = () => {
   const [file, setFile] = useState(null);
@@ -13,7 +13,7 @@ const Settings = () => {
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/"
+  const PF = "http://localhost:5000/images/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +47,11 @@ const Settings = () => {
     <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsTitle">
-          <span><Link to="/" className="settingsTitleHome">Home</Link></span>
+          <span>
+            <Link to="/" className="settingsTitleHome">
+              Home
+            </Link>
+          </span>
           <span className="settingsTitleUpdate">Update Your Account</span>
           <span className="settingsTitleDelete">Delete Account</span>
         </div>
@@ -55,7 +59,7 @@ const Settings = () => {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
-              src={file ? URL.createObjectURL(file) : PF+user.profilePic}
+              src={file ? URL.createObjectURL(file) : PF + user.profilePic}
               alt=""
             />
             <label htmlFor="fileInput">

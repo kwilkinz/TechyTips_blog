@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import TypeText from "./TypeText";
-import Topbar from "../../TopBar/Topbar";
+import Topbar from "../TopBar/Topbar";
 
 const Header = () => {
   return (

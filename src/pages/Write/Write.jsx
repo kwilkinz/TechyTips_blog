@@ -1,11 +1,12 @@
-import { useContext, useState } from "react";
+import "./Write.css";
 import axios from "axios";
 import Topbar from "../../components/TopBar/Topbar";
-import "./Write.css";
 import { Context } from "../../context/Context";
+import { useContext, useState } from "react";
 
 const Write = () => {
   const [title, setTitle] = useState("");
+  const [category, setCategory] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
@@ -16,6 +17,7 @@ const Write = () => {
       username: user.username,
       title,
       desc,
+      category,
     };
     if (file) {
       const data = new FormData();
@@ -44,7 +46,7 @@ const Write = () => {
       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
-            {/* <i className="writeIcon fas fa-plus"></i> */}
+            <i className="writeIcon fas fa-plus" alt="add photo"></i>
           </label>
           <input
             type="file"
@@ -58,6 +60,12 @@ const Write = () => {
             className="writeInput"
             autoFocus={true}
             onChange={(e) => setTitle(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Category (Technology)"
+            className="writeCategory"
+            onChange={(e) => setCategory(e.target.value)}
           />
         </div>
         <div className="writeFormGroup">
