@@ -32,7 +32,9 @@ const Write = () => {
     try {
       const res = await axios.post("https://techytips-backend.onrender.com/api/posts", newPost);
       window.location.replace("/post/" + res.data._id);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err + "In write probably the data._id")
+    }
   };
 
   return (
