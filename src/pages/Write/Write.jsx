@@ -26,12 +26,12 @@ const Write = () => {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://techytips-backend.onrender.com/api/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      const res = await axios.post("https://techytips-backend.onrender.com/api/posts", newPost);
+      window.location.replace("https://techytips-backend.onrender.com/api/post/" + res.data._id);
     } catch (err) {}
   };
 
