@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios
-      .post(url, {
+      .get(url, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json;charset=UTF-8",
