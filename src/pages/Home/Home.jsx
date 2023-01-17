@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get(`${API_BASE_URL}/posts`)
+      const res = await axios.get(`${API_BASE_URL}/api/posts`)
       // const res = await axios.get("https://techytips-backend.onrender.com/api/posts");
       // const res = await axios.get("api/posts");
       setPosts(res.data);
