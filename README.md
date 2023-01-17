@@ -6,9 +6,7 @@ This modern Techy Tips theme is perfect for creating any kind of blog website fr
 
 - [Installation](#installation-start)
 - [Usage](#usage)
-- [Credits](#credits)
-- [Features_Added-inProgress](#features)
-- [tests](#tests)
+- [Features](#features)
 
 ---
 
@@ -51,54 +49,30 @@ Screenshots and examples for how this application works.
 
 ### Home Page of Blog --
 
-![home](public/assets/images/homescreenshot.png)
+![home](src/images/home.png)
 
 ---
 
-### Blog Pages by Id Clicked --
+### Individual Blog Post --
 
-![individual blog by Id](public/assets/images/blogidscreenshot.png)
-
----
-
-### Blog not Found by Category --
-
-![Not found](public/assets/images/notfoundscreenshot.png)
+![individual blog by Id](src/images/write.png)
 
 ---
 
-## Credits:
+### Update User Settings --
 
-- [codeFreeze Youtube](https://www.youtube.com/watch?v=7kjud2ikReQ)
-- [Heartbeat Animation](https://www.youtube.com/watch?v=JXJPbWQmptE)
+![settings](src/images/updateSetting.png)
 
 ---
+
+### Login Page and Registration --
+
+![Login](src/images/login.png)
+![registration](src/images/register.png)
 
 ## Features
 
-### Added:
-
-1. [ √ ] Typewriter Effect for Title using: `npm i typewriter-effect` : [Repository](github.com/tameemsafi/typewriterjs).
-2. [ √ ] User Hearts Effect: used CSS and useStates so the user can toggle between liking a post and unliking a post.
-
----
-
-### Progress for Front-End:
-
-1. [ ] Cookies to a persons local machine to be able to store their data.
-2. [ ] Create a login page for different users.
-3. [ ] Different id's will be connected to different specific EJS files. In that case all Blog posts can have different appearances.
-4. [ ] Will design my own characters for individual author posts.
-
----
-
-### Progress for Back-End:
-
-1. [ ] Build a RESTful API using Express and Knex
-2. [ ] Use a PostgreSQL Database - Render.
-
----
-
-## Tests:
-
-Not currently implemented.
+- [ √ ] Typewriter Effect for Title using: `npm i typewriter-effect` : [Repository](github.com/tameemsafi/typewriterjs).
+- [ √ ] Create a login page for different users.
+- [ √ ] Create a registration page for new users.
+- [ √ ] Designed a settings page for users that have accounts to change name, photo, password.
