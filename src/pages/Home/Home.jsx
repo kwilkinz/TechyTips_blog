@@ -7,12 +7,22 @@ import axios from "axios";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
+ const url = 'https://techytips-backend.onrender.com/api/posts'
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("https://techytips-backend.onrender.com/api/posts");
+      const res = await axios
+      .post(url, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json;charset=UTF-8",
+        },
+      })
+      .then((res) => {
+        setPosts(res.data)
+      })
       // const res = await axios.get("api/posts");
-      setPosts(res.data);
+      // setPosts(res.data);
     };
     fetchPosts();
   }, []);
