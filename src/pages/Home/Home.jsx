@@ -12,7 +12,6 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get(url)
-      // const res = await axios.get("api/posts");
       setPosts(res.data);
     };
     fetchPosts();

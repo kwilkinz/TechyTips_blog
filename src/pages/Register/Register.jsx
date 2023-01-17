@@ -18,7 +18,7 @@ const Register = () => {
         email,
         password,
       });
-      res.data && window.location.replace("https://techytips-backend.onrender.com/api/auth/login");
+      res.data && window.location.replace("/login");
     } catch (err) {
       setError(true);
     }
