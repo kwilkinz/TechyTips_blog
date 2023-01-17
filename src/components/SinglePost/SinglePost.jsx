@@ -19,7 +19,7 @@ const SinglePost = () => {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get(" https://techytips-backend.onrender.com/api/posts/" + path);
+      const res = await axios.get("https://techytips-backend.onrender.com/api/posts/" + path);
       // const res = await axios.get("/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
