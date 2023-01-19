@@ -6,7 +6,7 @@ import { Context } from "../../context/Context";
 import { useContext } from "react";
 
 const BlogItem = ({ post }) => {
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://techytips-backend.onrender.com/api/images/";
   const { user } = useContext(Context);
 
   return (
