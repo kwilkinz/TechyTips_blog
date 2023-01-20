@@ -34,8 +34,8 @@ const Write = () => {
       // works
       const res = await axios.post("/posts", newPost);
 
-      //TODO getting a 500 error trying to POST
-      window.location.replace("/");
+      //TODO : Error will post but will not load directly to the post id
+      window.location.replace("/post/" + res._id);
     } catch (err) {
       console.log(err)
     }
