@@ -42,10 +42,14 @@ const Topbar = () => {
       </div>
       <div className="topRight">
         {user ? (
-          <Link to="/settings">
-            <p>User Settings</p>
-            {/* // <img className="topImg" src={PF + user.profilePic} alt="" /> */}
-          </Link>
+            <Link
+              className="link"
+              to="/settings"
+              style={{ textDecoration: "none", color: "inherit" }}
+              // <img className="topImg" src={PF + user.profilePic} alt="" /> 
+            >
+              USER SETTINGS
+            </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">
