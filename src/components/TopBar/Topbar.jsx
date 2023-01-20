@@ -43,7 +43,7 @@ const Topbar = () => {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            {!user.profilePic ? <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg" /> : <img className="topImg" src={PF + user.profilePic} alt="" /> }
+            <p>User Settings</p>
             {/* // <img className="topImg" src={PF + user.profilePic} alt="" /> */}
           </Link>
         ) : (
