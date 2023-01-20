@@ -28,12 +28,17 @@ const Write = () => {
       try {
         // updated here adding /api
         await axios.post("https://techytips-backend.onrender.com/api/upload", data);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err)
+      }
     }
     try {
       const res = await axios.post("https://techytips-backend.onrender.com/api/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
-    } catch (err) {}
+      // window.location.replace("/post/" + res.data._id);
+      window.location.reload(true);
+    } catch (err) {
+      console.log(err)
+    }
   };
 
   return (

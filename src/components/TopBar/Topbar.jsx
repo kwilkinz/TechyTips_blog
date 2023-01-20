@@ -45,10 +45,10 @@ const Topbar = () => {
             <Link
               className="link"
               to="/settings"
-              style={{ textDecoration: "none", color: "inherit" }}
+              style={{ textDecoration: "none" }}
               // <img className="topImg" src={PF + user.profilePic} alt="" /> 
             >
-              USER SETTINGS
+              MY SETTINGS
             </Link>
         ) : (
           <ul className="topList">
