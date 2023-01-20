@@ -31,11 +31,9 @@ const Write = () => {
     }
     try {
       const res = await axios.post("https://techytips-backend.onrender.com/api/posts", newPost);
-      console.log(res.data._id)
-      window.location.replace("/post/" + res.data._id);
-    } catch (err) {
-      console.log(err + "In write probably the data._id")
-    }
+      // window.location.replace("/post/" + res.data._id);
+      window.location.replace("/");
+    } catch (err) {}
   };
 
   return (
