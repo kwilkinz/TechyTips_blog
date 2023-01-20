@@ -34,7 +34,8 @@ const Write = () => {
       const res = await axios.post("/posts", newPost);
 
       //TODO : Error will post but will not load directly to the post id
-      window.location.replace("https://techytips-backend.onrender.com/api/posts");
+      // WORKS converts to JSON window.location.replace("https://techytips-backend.onrender.com/api/posts");
+      window.location.replace("https://techytips-backend.onrender.com/api/post/" + res.data._id);
     } catch (err) {
       console.log(err)
     }
@@ -54,6 +55,12 @@ const Write = () => {
             <i className="writeIcon fas fa-plus" alt="add photo"></i>
           </label>
           <input
+            type="text"
+            placeholder="Category (Technology)"
+            className="writeCategory"
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <input
             type="file"
             id="fileInput"
             style={{ display: "none" }}
@@ -65,12 +72,6 @@ const Write = () => {
             className="writeInput"
             autoFocus={true}
             onChange={(e) => setTitle(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Category (Technology)"
-            className="writeCategory"
-            onChange={(e) => setCategory(e.target.value)}
           />
         </div>
         <div className="writeFormGroup">
