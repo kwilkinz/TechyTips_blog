@@ -28,9 +28,7 @@ const Write = () => {
       try {
         // get a 200 
         await axios.post("https://techytips-backend.onrender.com/api/upload", data);
-      } catch (err) {
-        console.log(err)
-      }
+      } catch (err) {}
     }
     try {
       //TODO getting a 500 error trying to POST
