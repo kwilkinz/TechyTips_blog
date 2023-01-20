@@ -35,7 +35,7 @@ const Write = () => {
       const res = await axios.post("/posts", newPost);
 
       //TODO : Error will post but will not load directly to the post id
-      window.location.replace("/post/" + res._id);
+      window.location.replace("/posts");
     } catch (err) {
       console.log(err)
     }
