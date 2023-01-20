@@ -31,10 +31,11 @@ const Write = () => {
       } catch (err) {}
     }
     try {
-      //TODO getting a 500 error trying to POST
+      // works
       const res = await axios.post("/posts", newPost);
-      // recieve a 200 
-      window.location.replace("/post/" + res.data._id);
+
+      //TODO getting a 500 error trying to POST
+      window.location.replace("/");
     } catch (err) {
       console.log(err)
     }
