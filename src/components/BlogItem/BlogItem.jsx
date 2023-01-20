@@ -25,7 +25,7 @@ const BlogItem = ({ post }) => {
 
       <footer>
         <div className="blogItem-author">
-          {user ? <img src={user.profilePic} alt="" /> : <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000"/> }
+          {/* {user ? <img src={user.profilePic} alt="" /> : <img src="https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000"/> } */}
           
           <div>
             <h6>{post.username}</h6>
