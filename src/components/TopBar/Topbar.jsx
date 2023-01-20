@@ -43,9 +43,9 @@ const Topbar = () => {
       <div className="topRight">
         {user ? (
             <Link
-              className="link"
+              className="setting"
               to="/settings"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", color: "rgba(160, 160, 160, 0.01)"}}
               // <img className="topImg" src={PF + user.profilePic} alt="" /> 
             >
               MY SETTINGS

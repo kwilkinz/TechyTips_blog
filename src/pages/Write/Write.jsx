@@ -26,14 +26,16 @@ const Write = () => {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        // updated here adding /api
+        // get a 200 
         await axios.post("https://techytips-backend.onrender.com/api/upload", data);
       } catch (err) {
         console.log(err)
       }
     }
     try {
-      const res = await axios.post("https://techytips-backend.onrender.com/api/posts", newPost);
+      //TODO getting a 500 error trying to POST
+      const res = await axios.post("/posts", newPost);
+      // recieve a 200 
       window.location.replace("/post/" + res.data._id);
     } catch (err) {
       console.log(err)
