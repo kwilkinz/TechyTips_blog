@@ -10,7 +10,6 @@ const Write = () => {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
-  const path = location.pathname.split("/")[2];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +26,6 @@ const Write = () => {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        // get a 200 
         await axios.post("https://techytips-backend.onrender.com/api/upload", data);
       } catch (err) {}
     }
@@ -37,7 +35,6 @@ const Write = () => {
 
       //TODO : Error will post but will not load directly to the post id
       window.location.replace("https://techytips-backend.onrender.com/api/posts");
-      // window.location.replace("/");
     } catch (err) {
       console.log(err)
     }
