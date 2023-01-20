@@ -10,6 +10,7 @@ const Write = () => {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
+  const path = location.pathname.split("/")[2];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,9 +34,10 @@ const Write = () => {
     try {
       // works
       const res = await axios.post("/posts", newPost);
-
+      console.log(res.data)
       //TODO : Error will post but will not load directly to the post id
-      window.location.replace("/posts");
+      // window.location.replace("https://techytips-backend.onrender.com/api/posts");
+      // window.location.replace("/");
     } catch (err) {
       console.log(err)
     }
