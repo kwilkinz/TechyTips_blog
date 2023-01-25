@@ -31,11 +31,11 @@ const Write = () => {
     }
     try {
       // works
-      const res = await axios.post("https://techytips-backend.onrender.com/api/posts/", newPost);
+      const res = await axios.post("https://techytips-backend.onrender.com/api/posts", newPost);
 
       //TODO : Error will post but will not load directly to the post id - 
       // WORKS converts to JSON window.location.replace("https://techytips-backend.onrender.com/api/posts");
-      window.location.replace("/posts/" + res.username._id); 
+      window.location.replace("/posts/" + res._id); 
       // try res._id = res,username._id // res.(retriving post or username id?)
     } catch (err) {}
   };
