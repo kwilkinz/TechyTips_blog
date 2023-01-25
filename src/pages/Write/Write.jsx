@@ -35,7 +35,7 @@ const Write = () => {
 
       //TODO : Error will post but will not load directly to the post id - 
       // WORKS converts to JSON window.location.replace("https://techytips-backend.onrender.com/api/posts");
-      window.location.replace("/post/" + res.username._id); 
+      window.location.replace("/posts/" + res.username._id); 
       // try res._id = res,username._id // res.(retriving post or username id?)
     } catch (err) {}
   };
