@@ -30,7 +30,6 @@ const Write = () => {
       } catch (err) {}
     }
     try {
-      // works
       const res = await axios.post("https://techytips-backend.onrender.com/api/posts", newPost);
       window.location.replace("https://techytips.onrender.com/"); 
     } catch (err) {}

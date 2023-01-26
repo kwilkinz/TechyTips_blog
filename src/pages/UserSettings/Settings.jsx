@@ -56,7 +56,7 @@ const Settings = () => {
           <span className="settingsTitleDelete">Delete Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
-          {/* <label>Profile Picture</label>
+          <label>Profile Picture</label>
           <div className="settingsPP">
             <img
               src={file ? URL.createObjectURL(file) : PF + user.profilePic}
@@ -71,7 +71,7 @@ const Settings = () => {
               style={{ display: "none" }}
               onChange={(e) => setFile(e.target.files[0])}
             />
-          </div> */}
+          </div>
           <label>Username</label>
           <input
             type="text"
