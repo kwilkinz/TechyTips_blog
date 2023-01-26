@@ -70,11 +70,11 @@ const Write = () => {
           />
         </div>
         <div className="writeFormGroup">
-          <label for="markdown"></label>
+          <label for="desc"></label>
           <textarea
             placeholder="Tell your story..."
-            name="markdown"
-            id="markdown"
+            name="desc"
+            id="desc"
             className="writeInput writeText"
             onChange={(e) => setDesc(e.target.value)}
             required

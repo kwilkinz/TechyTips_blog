@@ -101,7 +101,7 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="singlePostDesc">{desc}</p>
+          <p className="singlePostDesc">{desc.sanitizedHtml}</p>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
