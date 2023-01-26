@@ -16,7 +16,6 @@ const SinglePost = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-  const description = desc.sanitizedHtml
 
   useEffect(() => {
     const getPost = async () => {
@@ -102,7 +101,9 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="singlePostDesc">{description}</p>
+          <html>
+            <p className="singlePostDesc">{desc.sanitizedHtml}</p>
+          </html>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
