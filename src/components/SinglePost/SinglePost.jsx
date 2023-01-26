@@ -30,7 +30,6 @@ const SinglePost = () => {
   const handleDelete = async () => {
     try {
       await axios.delete(`https://techytips-backend.onrender.com/api/posts/${post._id}`, {
-        // await axios.delete(`/posts/${post._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -40,7 +39,6 @@ const SinglePost = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(`https://techytips-backend.onrender.com/api/posts/${post._id}`, {
-        // await axios.put(`/posts/${post._id}`, {
         username: user.username,
         title,
         desc,
