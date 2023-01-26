@@ -35,7 +35,7 @@ const Write = () => {
 
       //TODO : Error will post but will not load directly to the post id - 
       // window.location.replace("https://techytips-backend.onrender.com/api/posts/" + res.data._id); 
-      window.location.replace("https://techytips-backend.onrender.com"); 
+      window.location.replace("https://techytips.onrender.com/"); 
     } catch (err) {}
   };
 
