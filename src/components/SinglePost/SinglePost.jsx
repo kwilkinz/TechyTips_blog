@@ -6,6 +6,9 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
+const createDomPurify = require("dompurify");
+const { JSDOM } = require("jsdom");
+const dompurify = createDomPurify(new JSDOM().window);
 
 const SinglePost = () => {
   const location = useLocation();
@@ -101,8 +104,9 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <div className="singlePostDesc" dangerouslySetInnerHTML={{ __html: desc.sanitizedHtml }}>
-            {/* // <p className="singlePostDesc">{desc}</p> */}
+          <div dangerouslySetInnerHTML={{__html: dompurify.sanitize({desc})}}> 
+
+            {/* <p className="singlePostDesc">{desc}</p> */}
           </div>
         )}
         {updateMode && (

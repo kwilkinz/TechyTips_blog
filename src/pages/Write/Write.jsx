@@ -70,14 +70,12 @@ const Write = () => {
           />
         </div>
         <div className="writeFormGroup">
-          <label for="desc"></label>
           <textarea
             placeholder="Tell your story..."
             name="desc"
             id="desc"
             className="writeInput writeText"
             onChange={(e) => setDesc(e.target.value)}
-            required
           ></textarea>
         </div>
         <button className="writeSubmit" type="submit">
