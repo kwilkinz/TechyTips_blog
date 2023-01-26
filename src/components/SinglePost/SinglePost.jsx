@@ -101,7 +101,9 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-            <p className="singlePostDesc">{desc}</p>
+          <div className="singlePostDesc" dangerouslySetInnerHTML={{ __html: desc.sanitizedHtml }}>
+            {/* // <p className="singlePostDesc">{desc}</p> */}
+          </div>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
