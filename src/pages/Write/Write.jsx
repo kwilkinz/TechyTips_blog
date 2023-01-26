@@ -3,7 +3,6 @@ import axios from "axios";
 import Topbar from "../../components/TopBar/Topbar";
 import { Context } from "../../context/Context";
 import { useContext, useState } from "react";
-import TextareaMarkdown from 'textarea-markdown';
 
 const Write = () => {
   const [title, setTitle] = useState("");
@@ -11,10 +10,6 @@ const Write = () => {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
-
-
-  let textarea = document.querySelector("textarea");
-new TextareaMarkdown(textarea);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
