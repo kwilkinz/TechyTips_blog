@@ -6,9 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-import DOMPurify from "dompurify";
-import { JSDOM } from "jsdom";
-
+import { Remarkable } from "remarkable";
 
 const SinglePost = () => {
   const location = useLocation();
@@ -19,9 +17,8 @@ const SinglePost = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
+  const markdown = new Remarkable()
 
-  // const dompurify = createDomPurify(new JSDOM().window);
-  
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("https://techytips-backend.onrender.com/api/posts/" + path);
@@ -106,10 +103,10 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(desc)}}> 
+          <div dangerouslySetInnerHTML={{__html: markdown.render({desc})}}></div> 
 
-          {/* // <p className="singlePostDesc">{desc}</p>  */}
-          </div>
+        //  <p className="singlePostDesc">{desc}</p>
+    
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
