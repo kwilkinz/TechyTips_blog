@@ -3,7 +3,6 @@ import axios from "axios";
 import Topbar from "../../components/TopBar/Topbar";
 import { Context } from "../../context/Context";
 import { useContext, useState } from "react";
-import MarkdownTextarea from "react-markdown-textarea"
 
 const Write = () => {
   const [title, setTitle] = useState("");
@@ -79,7 +78,6 @@ const Write = () => {
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
         </div>
-        <MarkdownTextarea /> 
         <button className="writeSubmit" type="submit">
           Publish
         </button>
