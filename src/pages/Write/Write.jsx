@@ -70,11 +70,14 @@ const Write = () => {
           />
         </div>
         <div className="writeFormGroup">
+          <label for="markdown"></label>
           <textarea
             placeholder="Tell your story..."
-            type="text"
+            name="markdown"
+            id="markdown"
             className="writeInput writeText"
             onChange={(e) => setDesc(e.target.value)}
+            required
           ></textarea>
         </div>
         <button className="writeSubmit" type="submit">
