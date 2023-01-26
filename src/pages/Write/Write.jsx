@@ -78,14 +78,11 @@ new TextareaMarkdown(textarea);
         <div className="writeFormGroup">
           <textarea
             placeholder="Tell your story..."
-            id="editor"
-            data-preview="#preview"
+            type="text"
             className="writeInput writeText"
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
         </div>
-        <h2>Preview</h2>
-        <div id="preview"></div>
         <button className="writeSubmit" type="submit">
           Publish
         </button>

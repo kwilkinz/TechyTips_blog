@@ -6,7 +6,6 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-import TextareaMarkdown from 'textarea-markdown'
 
 const SinglePost = () => {
   const location = useLocation();
@@ -17,9 +16,6 @@ const SinglePost = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-  
-  let textarea = document.querySelector("textarea");
-  new TextareaMarkdown(textarea);
 
   useEffect(() => {
     const getPost = async () => {
@@ -106,7 +102,6 @@ const SinglePost = () => {
           />
         ) : (
         <p className="singlePostDesc">{desc}</p>
-    
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
