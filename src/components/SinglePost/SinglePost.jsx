@@ -6,9 +6,9 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-const createDomPurify = require("dompurify");
-const { JSDOM } = require("jsdom");
-const dompurify = createDomPurify(new JSDOM().window);
+import DOMPurify from "dompurify";
+import { JSDOM } from "jsdom";
+
 
 const SinglePost = () => {
   const location = useLocation();
@@ -20,6 +20,8 @@ const SinglePost = () => {
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
 
+  // const dompurify = createDomPurify(new JSDOM().window);
+  
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("https://techytips-backend.onrender.com/api/posts/" + path);
@@ -104,9 +106,9 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <div dangerouslySetInnerHTML={{__html: dompurify.sanitize({desc})}}> 
+          <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(desc)}}> 
 
-            {/* <p className="singlePostDesc">{desc}</p> */}
+          {/* // <p className="singlePostDesc">{desc}</p>  */}
           </div>
         )}
         {updateMode && (
