@@ -4,6 +4,7 @@ This modern Techy Tips theme is perfect for creating any kind of blog website fr
 
 ## Table of Contents:
 
+- [Take me to: Techy Tips Blog](https://techytips.onrender.com)
 - [Installation](#installation-start)
 - [Usage](#usage)
 - [Features](#features)
