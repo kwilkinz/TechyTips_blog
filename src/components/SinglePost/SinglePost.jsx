@@ -6,6 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
+import ReactMarkdown from "react-markdown";
 
 const SinglePost = () => {
   const location = useLocation();
@@ -99,7 +100,8 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-        <p className="singlePostDesc">{desc}</p>
+          <ReactMarkdown children={desc} escapeHtml={true} />
+        // <p className="singlePostDesc">{desc}</p>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
