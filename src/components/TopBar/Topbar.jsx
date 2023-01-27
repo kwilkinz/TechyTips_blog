@@ -61,7 +61,7 @@ const Topbar = () => {
                 LOGIN
               </Link>
             </li>
-            <li className="topListItem">
+            {/* <li className="topListItem">
               <Link
                 className="link"
                 to="/register"
@@ -69,7 +69,7 @@ const Topbar = () => {
               >
                 REGISTER
               </Link>
-            </li>
+            </li> */}
           </ul>
         )}
       </div>
