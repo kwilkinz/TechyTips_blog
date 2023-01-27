@@ -4,6 +4,7 @@ import CategoryTags from "../common/Category/CategoryTags";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import { useContext } from "react";
+import ReactMarkdown from "react-markdown";
 
 const BlogItem = ({ post }) => {
   const PF = "https://techytips-backend.onrender.com/images/";
@@ -12,7 +13,7 @@ const BlogItem = ({ post }) => {
   return (
     <div className="blogItem-wrap">
       {post.photo && (
-        <img className="postImg" src={PF + post.photo} alt="" />
+        <img className="postImg" src={post.photo} alt="" />
       )}
       <CategoryTags label={post.category} />
       <Link
@@ -21,7 +22,8 @@ const BlogItem = ({ post }) => {
       >
         <h3>{post.title}</h3>
       </Link>
-      <p className="blogItem-desc">{post.desc}</p>
+      {/* <p className="blogItem-desc">{post.desc}</p> */}
+      <ReactMarkdown className="blogItem-desc" children={post.desc} escapeHtml={true} />
 
       <footer>
         <div className="blogItem-author">
