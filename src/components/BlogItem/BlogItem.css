@@ -49,7 +49,6 @@
 .blogItem-author {
   display: flex;
   align-items: center;
-  font-size: 0.7rem;
 }
 
 .blogItem-author img {

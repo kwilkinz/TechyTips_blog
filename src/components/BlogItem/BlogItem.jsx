@@ -26,10 +26,10 @@ const BlogItem = ({ post }) => {
 
       <footer>
         <div className="blogItem-author">
-          {user ? <img src={user.profilePic} alt="" /> : null }
+          {/* {user ? <img src={PF + user.profilePic} alt="" /> : null } */}
           
           <div>
-            <h6>{post.username}</h6>
+            <h6 style={{fontSize: "12px"}}>{post.username}</h6>
             <p> {new Date(post.createdAt).toDateString()}</p>
           </div>
         </div>
