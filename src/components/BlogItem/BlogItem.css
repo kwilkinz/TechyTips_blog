@@ -49,6 +49,7 @@
 .blogItem-author {
   display: flex;
   align-items: center;
+  font-size: 0.7rem;
 }
 
 .blogItem-author img {
@@ -60,7 +61,8 @@
 }
 
 .blogItem-author p {
-  font-size: 0.6rem;
+  padding-top: 0.3rem;
+  font-size: 0.7rem;
   color: #a9a9a9;
   font-weight: 600;
 }
