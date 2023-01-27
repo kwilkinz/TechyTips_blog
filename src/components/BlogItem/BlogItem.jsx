@@ -7,7 +7,7 @@ import { useContext } from "react";
 import ReactMarkdown from "react-markdown";
 
 const BlogItem = ({ post }) => {
-  const PF = "https://techytips-backend.onrender.com/images";
+  const PF = "https://techytips-backend.onrender.com/images/";
   const { user } = useContext(Context);
 
   return (
@@ -29,7 +29,7 @@ const BlogItem = ({ post }) => {
           {/* {user ? <img src={PF + user.profilePic} alt="" /> : null } */}
           
           <div>
-            <h6 style={{fontSize: "12px"}}>{post.username}</h6>
+            <h6 style={{fontSize: "11px"}}>{post.username}</h6>
             <p> {new Date(post.createdAt).toDateString()}</p>
           </div>
         </div>
