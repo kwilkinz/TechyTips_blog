@@ -46,7 +46,7 @@ const Login = () => {
           Login
         </button>
       </form>
-      <div className="loginRegisterButton">
+      {/* <div className="loginRegisterButton">
         <Link
           className="link"
           to="/register"
@@ -54,7 +54,7 @@ const Login = () => {
         >
           Register
         </Link>
-      </div>
+      </div> */}
       <div className="homeLoginButton">
         <Link
           className="button"
