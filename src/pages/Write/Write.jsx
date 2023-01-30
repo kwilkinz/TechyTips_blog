@@ -26,7 +26,7 @@ const Write = () => {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://techytips-backend.onrender.com/api/upload", data);
       } catch (err) {}
     }
     try {
