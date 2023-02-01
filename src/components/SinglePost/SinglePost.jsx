@@ -17,6 +17,7 @@ const SinglePost = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
+  const source =  value.replace(/\n/gi, '\n &nbsp;');
 
   useEffect(() => {
     const getPost = async () => {
@@ -100,7 +101,7 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <ReactMarkdown parserOptions={{ commonmark: true }} children={desc} escapeHtml={true} />
+          <ReactMarkdown source={{ source }} children={desc} escapeHtml={true} />
         // <p className="singlePostDesc">{desc}</p>
         )}
         {updateMode && (
