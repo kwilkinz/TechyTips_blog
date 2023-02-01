@@ -100,7 +100,7 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <ReactMarkdown children={desc} escapeHtml={true} />
+          <ReactMarkdown parserOptions={{ commonmark: true }} children={desc} escapeHtml={true} />
         // <p className="singlePostDesc">{desc}</p>
         )}
         {updateMode && (
