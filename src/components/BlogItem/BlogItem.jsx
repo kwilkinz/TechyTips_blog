@@ -12,7 +12,7 @@ const BlogItem = ({ post }) => {
 
   return (
     <div className="blogItem-wrap">
-       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
+       {post.photo && <img src={PF + post.photo} className="postImg" alt="" />}
       <CategoryTags label={post.category} />
       <Link
         to={`/post/${post._id}`}

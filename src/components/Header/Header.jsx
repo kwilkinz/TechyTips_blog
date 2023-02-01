@@ -9,8 +9,8 @@ const Header = () => {
       <TypeText />
       <Topbar />
       <p>
-        Get your amazing techy tips here! <br />
-        From finances, favorite color themes, and more!
+        Everything for Junior Developers <br />
+        From How To's, Live Demos, and our Top Favorites!
       </p>
     </header>
   );
