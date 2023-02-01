@@ -17,7 +17,7 @@ const SinglePost = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-  const source =  value.replace(/\n/gi, '\n &nbsp;');
+  const source =  desc.replace(/\n/gi, '\n &nbsp;');
 
   useEffect(() => {
     const getPost = async () => {
