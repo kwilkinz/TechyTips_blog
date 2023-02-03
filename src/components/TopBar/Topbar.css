@@ -74,7 +74,10 @@
 
 /* Mobile Phones */
 @media (max-width: 550px) {
-  .link {
-    padding-right: 27px;
+  .link-home {
+    padding-right: 15px;
+  }
+  .link-login {
+    margin-right: 30px;
   }
 }

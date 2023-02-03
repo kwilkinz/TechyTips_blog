@@ -19,7 +19,7 @@ const Topbar = () => {
         <ul className="topList">
           <li className="topListItem">
             <Link
-              className="link"
+              className="link-home"
               to="/"
               style={{ textDecoration: "none", color: "inherit" }}
             >
@@ -28,7 +28,7 @@ const Topbar = () => {
           </li>
           <li className="topListItem">
             <Link
-              className="link"
+              className="link-write"
               to="/write"
               style={{ textDecoration: "none", color: "inherit" }}
             >
@@ -43,7 +43,7 @@ const Topbar = () => {
       <div className="topRight">
         {user ? (
             <Link
-              className="setting"
+              className="setting-login"
               to="/settings"
               style={{ textDecoration: "none", color: "lightcoral"}}
               // <img className="topImg" src={PF + user.profilePic} alt="" /> 
@@ -54,7 +54,7 @@ const Topbar = () => {
           <ul className="topList">
             <li className="topListItem">
               <Link
-                className="link"
+                className="link-login"
                 to="/login"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
