@@ -68,12 +68,17 @@
 }
 
 /* Mobile Phones */
-@media (max-width: 700px) {
-  
+@media (max-width: 550px) {
+  .link-home {
+    padding-right: 15px;
+  }
+  .link-login {
+    margin-right: 60px;
+  }
 }
 
 /* Mobile Phones */
-@media (max-width: 550px) {
+@media (max-width: 400px) {
   .link-home {
     padding-right: 15px;
   }
