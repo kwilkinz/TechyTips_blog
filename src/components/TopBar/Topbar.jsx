@@ -48,7 +48,7 @@ const Topbar = () => {
               style={{ textDecoration: "none", color: "lightcoral"}}
               // <img className="topImg" src={PF + user.profilePic} alt="" /> 
             >
-              MY SETTINGS
+             SETTINGS
             </Link>
         ) : (
           <ul className="topList">
