@@ -11,6 +11,7 @@ const Topbar = () => {
     dispatch({ type: "LOGOUT" });
   };
 
+
   return (
     <div className="top">
       <div className="topLeft"></div>
@@ -37,42 +38,7 @@ const Topbar = () => {
           <li className="topListItem" onClick={handleLogout}>
             {user && "LOGOUT"}
           </li>
-          {/* added this section */}
-          <li className="topRight">
-            {user ? (
-              <Link
-                className="setting"
-                to="/settings"
-                style={{ textDecoration: "none", color: "orange" }}
-                // <img className="topImg" src={PF + user.profilePic} alt="" />
-              >
-                MY SETTINGS
-              </Link>
-            ) : (
-              <li className="topList">
-                <li className="topListItem">
-                  <Link
-                    className="link"
-                    to="/login"
-                    style={{ textDecoration: "none", color: "orange" }}
-                  >
-                    LOGIN
-                  </Link>
-                </li>
-              </li>
-            )}
-          </li>
         </ul>
-      </div>
-    </div>
-  );
-};
-{
-  /* To here */
-}
-
-{
-  /* </ul>
       </div>
       <div className="topRight">
         {user ? (
@@ -94,10 +60,8 @@ const Topbar = () => {
               >
                 LOGIN
               </Link>
-            </li> */
-}
-{
-  /* <li className="topListItem">
+            </li>
+            {/* <li className="topListItem">
               <Link
                 className="link"
                 to="/register"
@@ -105,17 +69,12 @@ const Topbar = () => {
               >
                 REGISTER
               </Link>
-            </li> */
-}
-{
-  /* </ul>
+            </li> */}
+          </ul>
         )}
-      </div> */
-}
-{
-  /* </div>
+      </div>
+    </div>
   );
-}; */
-}
+};
 
 export default Topbar;
